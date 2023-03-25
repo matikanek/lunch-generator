@@ -1,0 +1,13 @@
+.drawer-container {
+  height: 100%;
+}
+
+.layout-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.layout-content {
+  width: clamp(320px, 80%, 1400px);
+  padding: 1rem 0;
+}
