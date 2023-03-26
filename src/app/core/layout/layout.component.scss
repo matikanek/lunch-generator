@@ -1,7 +1,7 @@
 @use 'src/app/core/theme/colors' as colors;
 
 .drawer-container {
-  height: 100%;
+  height: 100vh;
   background-color: colors.$color-lightgray;
 
   &__toggler {
