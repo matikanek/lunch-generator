@@ -3,12 +3,14 @@
     <app-layout-sidenav></app-layout-sidenav>
   </mat-drawer>
 
-  <button mat-icon-button color="primary" (click)="drawer.toggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
+  <div class="drawer-container__toggler">
+    <button mat-icon-button color="primary" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
 
   <div class="layout-wrapper">
-    <div class="layout-content">
+    <div class="layout-wrapper__content">
       <router-outlet></router-outlet>
     </div>
   </div>

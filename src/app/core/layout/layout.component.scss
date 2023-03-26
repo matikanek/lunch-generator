@@ -1,13 +1,19 @@
+@use 'src/app/core/theme/colors' as colors;
+
 .drawer-container {
   height: 100%;
+  background-color: colors.$color-lightgray;
+
+  &__toggler {
+    background-color: colors.$color-white;
+  }
 }
 
 .layout-wrapper {
   display: flex;
   justify-content: center;
-}
 
-.layout-content {
-  width: clamp(320px, 80%, 1400px);
-  padding: 1rem 0;
+  &__content {
+    width: clamp(320px, 100%, 1400px);  
+  }
 }

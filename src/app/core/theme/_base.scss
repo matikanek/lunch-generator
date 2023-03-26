@@ -1,0 +1,26 @@
+@use './colors' as colors;
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: colors.$color-lightgray;
+}
+  
+* {
+  box-sizing: border-box;
+}
+  
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+  
+p {
+  margin: 0;
+}
+  
+a {
+  width: fit-content;
+  text-decoration: inherit;
+}
