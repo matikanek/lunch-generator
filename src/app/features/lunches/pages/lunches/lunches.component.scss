@@ -1,6 +1,7 @@
 @use 'src/app/core/theme/colors' as colors;
 
 .lunch-search {
+  position: sticky;
   width: 100%;
   top: 0;
   left: 0;
@@ -11,5 +12,4 @@
 
 .lunches {
   padding: 1rem;
-  height: calc(100vh - 10rem);
 }

@@ -5,7 +5,7 @@
     matInput
     placeholder="{{ placeholer }}"
   />
-  <mat-icon *ngIf="icon" matSuffix>
+  <mat-icon *ngIf="icon || loader" matSuffix>
     <span *ngIf="!loader; else searchLoader">{{ icon }}</span>
   </mat-icon>
   <mat-error>{{ errorText }}</mat-error>
