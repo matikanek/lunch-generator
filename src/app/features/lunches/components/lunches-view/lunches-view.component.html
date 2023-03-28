@@ -1,0 +1,7 @@
+<ng-container *ngIf="lunches && !lunchesLoading; else loader">
+  <p *ngFor="let lunch of lunches">{{ lunch.name }}</p>
+</ng-container>
+
+<ng-template #loader>
+  <app-loader [size]="'big'"></app-loader>
+</ng-template>

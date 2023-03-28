@@ -1,18 +1,21 @@
 import { Component } from '@angular/core';
-import { ValidatorFn, Validators } from '@angular/forms';
+import { finalize, tap } from 'rxjs';
 import { LunchesFacade } from '../../services/lunches.facade';
 
 @Component({
   selector: 'app-lunches',
   templateUrl: './lunches.component.html',
   styleUrls: ['./lunches.component.scss'],
+  providers: [LunchesFacade],
 })
 export class LunchesComponent {
-  searchValidators: ValidatorFn[] = [Validators.minLength(2)];
+  lunches$ = this.lunchesFacade.lunches$.pipe(tap(() => (this.lunchesLoading = false)));
+  lunchesLoading = false;
 
   constructor(private lunchesFacade: LunchesFacade) {}
 
   getRecipies(searchText: string): void {
-    console.log(searchText);
+    this.lunchesLoading = true;
+    this.lunchesFacade.queryChange(searchText);
   }
 }

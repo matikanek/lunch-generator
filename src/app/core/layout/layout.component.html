@@ -1,6 +1,8 @@
 <mat-drawer-container class="drawer-container" autosize>
   <mat-drawer #drawer mode="side">
-    <app-layout-sidenav></app-layout-sidenav>
+    <app-layout-sidenav
+      (routeChangeEvent)="drawer.toggle()"
+    ></app-layout-sidenav>
   </mat-drawer>
 
   <div class="drawer-container__toggler">

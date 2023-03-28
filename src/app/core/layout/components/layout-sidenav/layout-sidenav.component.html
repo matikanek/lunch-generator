@@ -1,9 +1,21 @@
 <ul class="navigation">
   <li class="navigation__li">
-    <a mat-button routerLink="lunches" routerLinkActive="active"> lunches </a>
+    <a
+      mat-button
+      routerLink="lunches"
+      routerLinkActive="active"
+      (click)="routeChange()"
+    >
+      lunches
+    </a>
   </li>
   <li class="navigation__li">
-    <a mat-button routerLink="generator" routerLinkActive="active">
+    <a
+      mat-button
+      routerLink="generator"
+      routerLinkActive="active"
+      (click)="routeChange()"
+    >
       generator
     </a>
   </li>

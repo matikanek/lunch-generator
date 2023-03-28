@@ -5,8 +5,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoaderComponent } from './components/loader/loader.component';
 
-const components = [InputComponent];
+const components = [InputComponent, LoaderComponent];
 
 @NgModule({
   declarations: [...components],
