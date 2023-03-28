@@ -1,1 +1,15 @@
-<p>lunch works!</p>
+<ng-container *ngIf="{ value: lunch$ | async } as lunch">
+  <ng-container *ngIf="lunch.value && !lunchLoading; else loader">
+    <div class="lunch">
+      <app-card
+        [lunchId]="lunch.value.id"
+        [cardTitle]="lunch.value.name"
+        [cardSubtitle]="lunch.value.description!"
+      ></app-card>
+    </div>
+  </ng-container>
+</ng-container>
+
+<ng-template #loader>
+  <app-loader [size]="'big'"></app-loader>
+</ng-template>

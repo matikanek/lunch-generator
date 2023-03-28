@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { finalize, tap } from 'rxjs';
 import { LunchesFacade } from '../../services/lunches.facade';
 
@@ -6,10 +6,9 @@ import { LunchesFacade } from '../../services/lunches.facade';
   selector: 'app-lunches',
   templateUrl: './lunches.component.html',
   styleUrls: ['./lunches.component.scss'],
-  providers: [LunchesFacade],
 })
-export class LunchesComponent {
-  lunches$ = this.lunchesFacade.lunches$.pipe(tap(() => (this.lunchesLoading = false)));
+export class LunchesComponent implements OnDestroy {
+  lunches$ = this.lunchesFacade.getLunches().pipe(tap(() => (this.lunchesLoading = false)));
   lunchesLoading = false;
 
   constructor(private lunchesFacade: LunchesFacade) {}
@@ -17,5 +16,13 @@ export class LunchesComponent {
   getRecipies(searchText: string): void {
     this.lunchesLoading = true;
     this.lunchesFacade.queryChange(searchText);
+  }
+
+  private _resetLunchFacadeStates(): void {
+    this.lunchesFacade.queryChange('');
+  }
+
+  ngOnDestroy(): void {
+    this._resetLunchFacadeStates();
   }
 }

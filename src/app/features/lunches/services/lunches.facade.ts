@@ -11,10 +11,16 @@ export class LunchesFacade {
     query: this._query,
   });
 
-  lunches$: Observable<Lunch[]> = this._queryParams$.pipe(
-    delay(500),
-    switchMap(params => of(lunches.filter(lunch => lunch.name.toLowerCase().includes(params.query)))),
-  );
+  getLunches(): Observable<Lunch[]> {
+    return this._queryParams$.pipe(
+      delay(500),
+      switchMap(params => of(lunches.filter(lunch => lunch.name.toLowerCase().includes(params.query)))),
+    );
+  }
+
+  getLunch(lunchId: number): Observable<Lunch> {
+    return of(lunches.find(lunch => lunch.id === Number(lunchId))!).pipe(delay(500));
+  }
 
   queryChange(searchText: string): void {
     this._query = searchText;
