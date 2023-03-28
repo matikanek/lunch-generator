@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Lunch } from '../../models/lunch';
+import { Lunch } from '../../../../shared/models/lunch';
 
 @Component({
   selector: 'app-lunches-view',

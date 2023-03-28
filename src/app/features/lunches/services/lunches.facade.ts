@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, delay, Observable, of, switchMap, tap } from 'rxjs';
 import { LunchFilters } from '../models/lunch-filters';
-import { Lunch } from '../models/lunch';
-import { lunches } from '../mocks/lunches';
+import { Lunch } from '../../../shared/models/lunch';
+import { lunches } from '../../../shared/mocks/lunches';
 
 @Injectable()
 export class LunchesFacade {
