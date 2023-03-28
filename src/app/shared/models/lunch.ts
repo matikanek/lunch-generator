@@ -4,6 +4,7 @@ import { LunchType } from './lunch-type';
 import { PortionWeight } from './portion-weight';
 
 export interface Lunch {
+  id: number;
   name: string;
   description?: string;
   image?: string;

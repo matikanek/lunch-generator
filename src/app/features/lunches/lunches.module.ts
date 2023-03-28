@@ -6,9 +6,10 @@ import { RouterModule } from '@angular/router';
 import { lunchesdRoutes } from './lunches.routes';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { LunchesViewComponent } from './components/lunches-view/lunches-view.component';
+import { LunchComponent } from './pages/lunch/lunch.component';
 
 @NgModule({
-  declarations: [LunchesComponent, LunchesViewComponent],
+  declarations: [LunchesComponent, LunchesViewComponent, LunchComponent],
   imports: [CommonModule, SharedModule, RouterModule.forChild(lunchesdRoutes), MatProgressSpinnerModule],
 })
 export class LunchesModule {}

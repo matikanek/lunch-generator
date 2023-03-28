@@ -1,5 +1,12 @@
 <ng-container *ngIf="lunches && !lunchesLoading; else loader">
-  <p *ngFor="let lunch of lunches">{{ lunch.name }}</p>
+  <div class="lunches">
+    <app-card
+      *ngFor="let lunch of lunches"
+      [lunchId]="lunch.id"
+      [cardTitle]="lunch.name"
+      (previewEvent)="preview($event)"
+    ></app-card>
+  </div>
 </ng-container>
 
 <ng-template #loader>

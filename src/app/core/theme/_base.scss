@@ -3,7 +3,6 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: colors.$color-lightgray;
 
   ::-webkit-scrollbar {
     width: .2rem;
@@ -20,7 +19,7 @@ body {
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: darken(colors.$color-primary, 8%);
+    background: darken(colors.$color-primary, 10%);
   }
 }
   

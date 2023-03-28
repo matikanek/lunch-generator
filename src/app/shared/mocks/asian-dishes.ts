@@ -2,6 +2,7 @@ import { Lunch } from '../models/lunch';
 
 export const asianDishes: Lunch[] = [
   {
+    id: 1,
     name: 'Pad Thai',
     description: 'tajski makaron ryżowy z warzywami, kurczakiem, jajkiem i orzeszkami ziemnymi w sosie tamarindowym',
     cost: 3,
@@ -92,6 +93,7 @@ export const asianDishes: Lunch[] = [
     portionWeight: { weight: 450, unit: 'g' },
   },
   {
+    id: 2,
     name: 'Kung Pao Chicken',
     description:
       'chińska potrawa z kurczakiem, orzeszkami ziemnymi, papryczkami chili, imbirem i cebulą w pikantnym sosie',
@@ -187,8 +189,9 @@ export const asianDishes: Lunch[] = [
     portionWeight: { weight: 450, unit: 'g' },
   },
   {
+    id: 3,
     name: 'Pho',
-    description: 'wietnamska zupa z wołowiną, ryżowymi makaronami, cebulą, imbirem i sosem rybnym.',
+    description: 'wietnamska zupa z wołowiną, ryżowymi makaronami, cebulą, imbirem i sosem rybnym',
     cost: 2,
     speed: 2,
     type: 'asia',
@@ -268,11 +271,11 @@ export const asianDishes: Lunch[] = [
     ],
     portionWeight: { weight: 450, unit: 'g' },
   },
-  { name: 'Sushi Rolls', cost: 4, speed: 5, type: 'asia' },
-  { name: 'Miso Soup', cost: 2, speed: 1, type: 'asia' },
-  { name: 'Bao Buns', cost: 3, speed: 4, type: 'asia' },
-  { name: 'Bibimbap', cost: 3, speed: 4, type: 'asia' },
-  { name: 'Teriyaki Salmon', cost: 4, speed: 3, type: 'asia' },
-  { name: 'Ramen Soup', cost: 2, speed: 4, type: 'asia' },
-  { name: 'Korean Fried Chicken', cost: 3, speed: 3, type: 'asia' },
+  { id: 4, name: 'Sushi Rolls', cost: 4, speed: 5, type: 'asia' },
+  { id: 5, name: 'Miso Soup', cost: 2, speed: 1, type: 'asia' },
+  { id: 6, name: 'Bao Buns', cost: 3, speed: 4, type: 'asia' },
+  { id: 7, name: 'Bibimbap', cost: 3, speed: 4, type: 'asia' },
+  { id: 8, name: 'Teriyaki Salmon', cost: 4, speed: 3, type: 'asia' },
+  { id: 9, name: 'Ramen Soup', cost: 2, speed: 4, type: 'asia' },
+  { id: 10, name: 'Korean Fried Chicken', cost: 3, speed: 3, type: 'asia' },
 ];

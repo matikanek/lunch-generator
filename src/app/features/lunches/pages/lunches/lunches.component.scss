@@ -1,15 +1,22 @@
 @use 'src/app/core/theme/colors' as colors;
 
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .lunch-search {
   position: sticky;
-  width: 100%;
+  width: clamp(300px, 100%, 1000px);
   top: 0;
   left: 0;
   padding: 1rem 1rem 0;
   background-color: colors.$color-white;
   box-shadow: 0 1rem 2rem -2rem colors.$color-black;
+  z-index: 100;
 }
 
 .lunches {
-  padding: 1rem;
+  padding: 2rem 1rem;
 }

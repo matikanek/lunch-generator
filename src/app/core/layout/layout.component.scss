@@ -2,7 +2,7 @@
 
 .drawer-container {
   height: 100vh;
-  background-color: colors.$color-lightgray;
+  background-color: lighten(colors.$color-primary, 50%);
 
   &__toggler {
     background-color: colors.$color-white;
